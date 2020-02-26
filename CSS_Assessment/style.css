@@ -20,9 +20,8 @@ body{
 }
 
 .central{
-    background-color: violet;
     overflow: auto;
-    height: 400px;
+    height: 500px;
 }
 
 .left{
