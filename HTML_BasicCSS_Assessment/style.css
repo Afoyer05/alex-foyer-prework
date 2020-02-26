@@ -1,0 +1,44 @@
+body{
+  margin: 0;
+  line-height: 1.5;
+  text-transform: uppercase;
+  background-color: #79b9c5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+  margin-left: 1px;
+  color: WHITE;
+  float: left;
+  font-weight: 700;
+}
+
+.mainText{
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: fit-content;
+}
+
+h1.major{
+  font-size: 100px;
+  color: WHITE;
+  font-weight: 700;
+}
+h1.minor{
+  font-weight: 600;
+  color: BLACK;
+}
+h1.outline{
+  font-weight: 600;
+  color: WHITE;
+  display: inline-block;
+  outline-style: solid;
+  outline-width: medium;
+  outline-offset: 4px;
+}
+
+
