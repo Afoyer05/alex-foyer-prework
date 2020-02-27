@@ -1,0 +1,43 @@
+body{
+  margin: 0;
+  line-height: 1.5;
+  text-transform: uppercase;
+  /* background-color: #79b9c5; */
+  background-color: SILVER;
+  font-family: 'Fira Sans';
+}
+
+.header{
+  margin-left: 1px;
+  color: steelblue;
+  float: left;
+  font-weight: 700;
+}
+
+.mainText{
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  width: fit-content;
+}
+
+h1.major{
+  font-size: 100px;
+  color: steelblue;
+  font-weight: 700;
+  font-family: 'Josefin Sans';
+}
+h1.minor{
+  font-size: 20px;
+  color: BLACK;
+  font-family: 'Fira Sans';
+}
+
+.images{
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0;
+}
