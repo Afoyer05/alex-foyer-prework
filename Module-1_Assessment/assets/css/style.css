@@ -14,8 +14,19 @@ body {
     background-color: #4aaaaf;
 }
 
-.tealColor{
+.tealColor {
     color: #4aaaaf
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar-fixed-top {
+    position: relative;
 }
 
 .navMinorText{
