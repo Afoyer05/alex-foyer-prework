@@ -8,6 +8,7 @@ body {
     background-image: url('../images/interlaced.png');
     font-family: 'arial', 'helvetica-neue', Helvetica, sans-serif;
     color: #777777;
+    line-height: 2;
 }
 
 .tealBG {
@@ -65,4 +66,9 @@ body {
     width: 100%;
     text-align: center;
     color: white;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
