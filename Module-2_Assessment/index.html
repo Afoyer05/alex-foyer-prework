@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 text-center">
+                <!-- INSERT HEADER IMAGE/TEXT HERE -->
+                <h1 class="headerText">HANGMAN</h1>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h1 class="gameText text-center" id="previousWord">BEGIN</h1>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3 bg-info">
+                <!-- IMAGE FOR THE HANGMAN GAME HERE -->
+                
+            </div>
+            <div class="col-md-3 bg-white">
+                <!-- GAME FIELD -->
+                <h3 class="gameText">Press any key to get Started!</h3>
+                <h3 class="gameText" id="winsText">Wins: </h3>
+                <h3 class="gameText">Current Word</h3>
+                <h2 class="gameText" id="hiddenWord"></h2>
+                <h3 class="gameText">Number of guesses remaining:</h3>
+                <h3 class="gameText" id="guessCount"></h3>
+                <h3 class="gameText">Letters already guessed:</h3>
+                <h3 class="gameText" id="guessedLetters"></h3>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+    </div>
+    
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
