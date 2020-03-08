@@ -52,8 +52,6 @@ function countUniqueChars(iterable) {   //this function determines the number of
 function checkLetter(event){
     const key = event.key.toLowerCase();
     if(!Number(key)){   //this weeds out numbers from the inputs
-        console.log("key input: "+key);
-
         let i;
         let alreadyPressed = false;
         for(i of wLetters){                 //checks whether or not the guessed letter has been guessed before
@@ -72,15 +70,13 @@ function checkLetter(event){
             if(correctGuess){   //these lines push the guessed letter into the correct array
                 rLetters.push(key);
                 updateVisibleLetters();
-                console.log("correct guess");
             } else{
                 wLetters.push(key);
                 updateVisibleGuesses();
-                console.log("incorrect guess");
                 guessCount--;
                 guessCountDisplay.innerText = guessCount;
                 if(guessCount === 0){
-                    newWord();
+                    newWord();  //loss state
                 }
             }
 
@@ -88,12 +84,11 @@ function checkLetter(event){
                 numWins++;
                 numWinsDisplay.innerText = numWins;
                 previousWordDisplay.innerText = currentWord;
-                newWord();
+                newWord();  //win state
             }
         } 
     }  
 }
 
 newWord();
-
 document.addEventListener('keypress', checkLetter);

@@ -1,0 +1,27 @@
+body{
+    /* background-color: ; */
+    font-family: "Chakra Petch";
+}
+
+.headerText{
+    font-family: "Orbitron";
+    font-weight: 800;
+    font-size: 80px;
+}
+
+.headerSubText{
+    font-family: "Orbitron";
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.gameText{
+    
+}
+
+.gameText:after {
+    content: '\200b';
+}
+
+#winsText{}
+#guessCount{}
