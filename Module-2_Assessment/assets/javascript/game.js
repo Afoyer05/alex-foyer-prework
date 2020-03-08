@@ -9,7 +9,8 @@ var previousWordDisplay = document.querySelector('#previousWord');
 var numWinsDisplay = document.querySelector('#winsText');
 var guessCountDisplay = document.querySelector('#guessCount');
 var guessLettersDisplay = document.querySelector('#guessedLetters');
-// var imageDisplay = document.getElementById('#imageSwap');
+var winAudio = new Audio('assets/sounds/win.wav');
+var loseAudio = new Audio('assets/sounds/lose.wav');
 
 function newWord(){
     currentWord = possibleWords[ Math.floor(Math.random() * possibleWords.length) ];    //selects a random new word from the array
@@ -77,6 +78,7 @@ function checkLetter(event){
                 guessCount--;
                 guessCountDisplay.innerText = ("Number of guesses remaining: "+guessCount);
                 if(guessCount === 0){
+                    loseAudio.play();
                     newWord();  //loss state
                 }
             }
@@ -87,6 +89,7 @@ function checkLetter(event){
                 currentWord = currentWord.charAt(0).toUpperCase() + currentWord.slice(1);   //capitalizes the first letter
                 previousWordDisplay.innerText = currentWord;
                 imageSwap(currentWord);
+                winAudio.play();
                 newWord();  //win state
             }
         } 
