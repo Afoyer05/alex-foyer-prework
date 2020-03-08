@@ -1,6 +1,6 @@
 var rLetters = [];
 var wLetters = [];
-var possibleWords = ["alex", "stephen", "foyer", "rachel"];
+var possibleWords = ["mercury", "mars", "venus", "earth", "jupiter", "neptune", "saturn", "uranus"];
 var currentWord;
 var guessCount;
 var numWins = 0;
@@ -9,6 +9,7 @@ var previousWordDisplay = document.querySelector('#previousWord');
 var numWinsDisplay = document.querySelector('#winsText');
 var guessCountDisplay = document.querySelector('#guessCount');
 var guessLettersDisplay = document.querySelector('#guessedLetters');
+// var imageDisplay = document.getElementById('#imageSwap');
 
 function newWord(){
     currentWord = possibleWords[ Math.floor(Math.random() * possibleWords.length) ];    //selects a random new word from the array
@@ -16,7 +17,7 @@ function newWord(){
     wLetters = [];
 
     guessCount = 10;
-    guessCountDisplay.innerText = guessCount;
+    guessCountDisplay.innerText = ("Number of guesses remaining: "+guessCount);
     updateVisibleLetters();
     updateVisibleGuesses();
 }
@@ -74,7 +75,7 @@ function checkLetter(event){
                 wLetters.push(key);
                 updateVisibleGuesses();
                 guessCount--;
-                guessCountDisplay.innerText = guessCount;
+                guessCountDisplay.innerText = ("Number of guesses remaining: "+guessCount);
                 if(guessCount === 0){
                     newWord();  //loss state
                 }
@@ -82,12 +83,18 @@ function checkLetter(event){
 
             if(countUniqueChars(currentWord) === rLetters.length){    //this checks if the word is fully guessed
                 numWins++;
-                numWinsDisplay.innerText = numWins;
+                numWinsDisplay.innerText = ("Wins: "+numWins);
+                currentWord = currentWord.charAt(0).toUpperCase() + currentWord.slice(1);   //capitalizes the first letter
                 previousWordDisplay.innerText = currentWord;
+                imageSwap(currentWord);
                 newWord();  //win state
             }
         } 
     }  
+}
+
+function imageSwap(name){
+    document.getElementById("imageSwap").src = ("assets/images/"+name+".jpg");
 }
 
 newWord();

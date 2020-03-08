@@ -1,5 +1,6 @@
 body{
-    /* background-color: ; */
+    background-color: black;
+    color: white;
     font-family: "Chakra Petch";
 }
 
@@ -16,12 +17,12 @@ body{
 }
 
 .gameText{
-    
+    line-height: 2;
 }
 
 .gameText:after {
     content: '\200b';
 }
 
-#winsText{}
-#guessCount{}
+/* #winsText{}
+#guessCount{} */
